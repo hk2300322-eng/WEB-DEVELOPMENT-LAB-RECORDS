@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshit Kumar | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
+    header { background: #020617; padding: 20px; position: sticky; top: 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: #38bdf8; margin-left: 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #fff; }
+    .hero { padding: 80px 20px; text-align: center; }
+    .hero h1 { font-size: 3rem; color: #38bdf8; }
+    .hero p { max-width: 600px; margin: 15px auto; }
+    section { padding: 60px 20px; max-width: 900px; margin: auto; }
+    h2 { color: #38bdf8; margin-bottom: 20px; }
+    .skills span { display: inline-block; background: #020617; padding: 8px 12px; margin: 6px; border-radius: 6px; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: #020617; padding: 20px; border-radius: 10px; }
+    footer { text-align: center; padding: 20px; background: #020617; }
+    button { padding: 10px 20px; background: #38bdf8; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #0ea5e9; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h3>Harshit Kumar</h3>
+      <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Hi, I'm Harshit 👋</h1>
+    <p>A beginner web developer learning HTML, CSS, JavaScript & C programming.</p>
+    <button onclick="scrollToContact()">Hire Me</button>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a student and aspiring web developer. I enjoy building simple websites
+      and learning how the web works. My goal is to become a full‑stack developer.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>C Programming</span>
+      <span>Git & GitHub</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>My personal portfolio made using HTML, CSS and JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Calculator</h3>
+        <p>A simple calculator built using JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>C Programs</h3>
+        <p>Basic C programs for arrays, strings, and functions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: harshit@example.com</p>
+    <p>GitHub: github.com/harshit</p>
+  </section>
+
+  <footer>
+    <p>© 2026 Harshit Kumar. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>

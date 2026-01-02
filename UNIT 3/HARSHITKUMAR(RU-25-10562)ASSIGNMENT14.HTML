@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+
+<body>
+
+    <h2>Student Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        Name:
+        <input type="text" id="name" oninput="checkName()">
+        <br><br>
+
+        Email:
+        <input type="text" id="email" oninput="checkEmail()">
+        <br><br>
+
+        Password:
+        <input type="password" id="password" oninput="checkPassword()">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function checkName() {
+            var name = document.getElementById("name").value;
+            if (name.length < 3) {
+                alert("Name must be at least 3 characters long");
+            }
+        }
+
+        function checkEmail() {
+            var email = document.getElementById("email").value;
+            if (!email.includes("@")) {
+                alert("Email must contain @ symbol");
+            }
+        }
+
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+            }
+        }
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            if (name == "" || email == "" || password == "") {
+                alert("All fields are required");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>
