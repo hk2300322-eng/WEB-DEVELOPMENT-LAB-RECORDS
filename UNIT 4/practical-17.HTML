@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listeners Demo</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Listeners Example</h2>
+
+    <div id="box">Click or Hover Me</div>
+
+    <input type="text" id="inputBox" placeholder="Type something">
+    <p id="output"></p>
+
+    <button id="removeBtn">Remove Click Event</button>
+
+    <script>
+        var box = document.getElementById("box");
+        var input = document.getElementById("inputBox");
+        var output = document.getElementById("output");
+        var removeBtn = document.getElementById("removeBtn");
+
+
+        function boxClicked() {
+            alert("Box clicked!");
+        }
+
+        box.addEventListener("click", boxClicked);
+
+
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "orange";
+            box.innerHTML = "Mouse Over!";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightblue";
+            box.innerHTML = "Click or Hover Me";
+        });
+
+
+        input.addEventListener("keyup", function(event) {
+            output.innerHTML = "You typed: " + input.value;
+        });
+
+
+        removeBtn.addEventListener("click", function() {
+            box.removeEventListener("click", boxClicked);
+            alert("Click event removed from the box");
+        });
+    </script>
+
+</body>
+</html>

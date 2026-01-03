@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+  <title>Advanced CSS Box Model Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-image: url("images.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: #333;
+    }
+    header {
+      padding: 20px;    
+      border-bottom: 5px solid #4CAF50; 
+      margin-bottom: 30px;  
+      text-align: center;
+    }
+    nav {
+      padding: 15px 0;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 8px 15px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+    nav a:hover {
+      border-color: white;
+    }
+    main {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0 20px;
+    }
+    article {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 25px;    
+      border: 3px solid #4CAF50; 
+      border-radius: 15px;
+      margin: 20px 0;    
+      max-width: 600px;
+      box-sizing: border-box; 
+    }
+    aside {
+      background-color: rgba(240, 240, 240, 0.9);
+      padding: 20px;
+      border: 2px dashed #4CAF50;
+      margin: 20px 0;
+      border-radius: 10px;
+      max-width: 250px;
+      box-sizing: border-box;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 30px;
+      text-align: center;
+      border-top: 5px solid #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1> HI I AM HARSHIT KUMAR </h1>
+  <p>i am makeing a website using Advanced  css box model(including padding, borders, margins, and background image)</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main>
+  <article>
+    <h2>Understanding the CSS Box Model</h2>
+    <p>The CSS box model consists of four areas: content, padding, border, and margin.</p>
+    <p>Padding creates space inside the element, between content and border. Borders wrap around the padding and content, 
+      while margins define the space outside the border.</p>
+    <p>Using <code>box-sizing: border-box</code> ensures padding and border are included within the element's set width.</p>
+  </article>
+
+  <aside>
+    <h3>Quick Tips</h3>
+    <ul>
+      <li>Use padding to enhance readability.</li>
+      <li>Keep margins consistent for layout balance.</li>
+      <li>Apply borders to visually separate content.</li>
+      <li>Background images add aesthetic appeal.</li>
+    </ul>
+  </aside>
+</main>
+
+<footer>
+  &copy; 2025 Advanced CSS Example
+</footer>
+
+</body>
+</html>
